@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+    scro11-behavior smooth;
+}
+body{
+    background-color: rgb(19, 27, 27);
+}
+header{
+    display: flex;
+    justify-self: space-between;
+    align-items: center;
+    margin: 2rem auto;
+    max-width: 1200px;
+}
+.navigation ul{
+display: flex;
+list-style: none;
+gap: 2rem;
+}
+.navigation a{
+text-decoration: none;
+color:#eeeeee ;
+}
+.navigation a:hover{
+    color: #00adb5;
+}
+hr{
+    opacity: 10;
+}
+.hero-title {
+    position: relative;
+    color: #a39292;
+    left: 240px;
+    top: -100px;
+}
+
+.hero-subtitle {
+    position: relative;
+    left: 240px;
+    top: -100px;
+    color: rgb(76, 76, 199);
+}
+.my-profile-img {
+display: block;
+position: relative;
+top: -464px;
+left: 250px;
+z-index: -1;
+}
+
+img[src="assets/assets/imgs/About me.png"] {
+    display: block;
+    position: relative;
+    top: 50px;
+    left: 100px;
+    z-index: -1;
+}
+img[src="assets/assets/svg/AboutMe.svg"] {
+    display: block;
+    position: relative;
+    top: -700px;
+    left: 800px;
+    z-index: -1;
+}
+
+
+.contactContainer{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2rem;
+    margin: 2rem auto;
+    max-width: 1200px;
+}
+.contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5rem;
+    gap: 20rem;
+}
+
+.contact h3, .contact a {
+    color: #eeeeee;
+    text-decoration: none;
+}
+.emailAndphone {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 550px;
+}
+footer{
+    color: #eeeeee;
+    padding: 2rem;
+    text-align: center;
+}
+/* ==========================================================================
+   كود إضافي لجعل النبذة وقسم التواصل متجاوبين مع جميع الشاشات
+   ========================================================================== */
+
+/* للشاشات المتوسطة (مثل الأيباد والتابلت) */
+@media (max-width: 992px) {
+    .bio-container {
+        top: -400px !important; /* تقليل الرفع ليناسب حجم الشاشة */
+        max-width: 90% !important;
+        padding: 25px !important;
+    }
+    .contactContainer {
+        top: -400px !important;
+    }
+    .contact {
+        gap: 20px !important;
+    }
+}
+
+/* للشاشات الصغيرة (مثل الجوالات) */
+@media (max-width: 768px) {
+    /* تعديل مكان الخلفية */
+    img[src*="background.svg"] {
+        top: -300px !important;
+    }
+
+    /* تعديل مربع النبذة الفخم للجوال */
+    .bio-container {
+        top: -350px !important;
+        max-width: 92% !important;
+        padding: 20px !important;
+        margin: 0 auto 20px auto !important;
+    }
+    .bio-container p {
+        font-size: 16px !important; /* تصغير الخط قليلاً ليناسب الجوال */
+        line-height: 1.6 !important;
+    }
+
+    /* تعديل قسم التواصل للجوال */
+    .contactContainer {
+        top: -350px !important;
+    }
+
+    /* ترتيب الرقم والبريد تحت بعض بدلاً من جانب بعض لتفادي خروجهم عن الشاشة */
+    .contact {
+        flex-direction: column !important; 
+        align-items: center !important;
+        gap: 15px !important;
+    }
+
+    .emailAndPhone {
+        width: 90% !important; /* ليكون المربع متناسقاً وعريضاً في الجوال */
+        justify-content: center !important;
+    }
+    
+    .emailAndPhone h3 {
+        font-size: 16px !important;
+    }
+}
